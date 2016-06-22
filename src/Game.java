@@ -36,7 +36,7 @@ public class Game {
             currentPlayer = player2;
         }
         else {
-        currentPlayer = player1;
+            currentPlayer = player1;
         }
     }
 
@@ -50,8 +50,8 @@ public class Game {
                 System.out.format("I'm sorry %s but you lose.\n", currentPlayer.getName());
             }
             else{
-                currentPlayer.chooseSticks();
                 switchPlayer();
+                choice = currentPlayer.chooseSticks();
 
             }
         }
