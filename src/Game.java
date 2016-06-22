@@ -15,6 +15,10 @@ public class Game {
         this.player2 = player2;
     }
 
+    public int getSticks() {
+        return sticks;
+    }
+
     public int stickTotal(){
         sticks = 0;
         System.out.println("Let's play Game of Sticks!!!!!!");
@@ -45,9 +49,8 @@ public class Game {
         while(sticks > 0 && sticks - choice > 0){
             sticks = sticks - choice;
             System.out.format("There are %d sticks left on the board\n", sticks);
-            if(sticks == 1 || sticks - choice < 0){
-
-                System.out.format("I'm sorry %s but you lose.\n", currentPlayer.getName());
+            if(sticks == 1 || (sticks - choice) > sticks){
+                switchPlayer();
             }
             else{
                 switchPlayer();
@@ -55,6 +58,7 @@ public class Game {
 
             }
         }
+        System.out.format("I'm sorry %s but you lose.\n", currentPlayer.getName());
 
         return currentPlayer;
     }

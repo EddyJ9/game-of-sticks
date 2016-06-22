@@ -3,8 +3,8 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Player player1 = new Player("player1");
-        Player player2 = new Player("player2");
+        Player player1 = new HumanPlayer("Player1");
+        Player player2 = new StupidAI("StupidAI");
         Game game = new Game(player1, player2);
 
         game.stickTotal();

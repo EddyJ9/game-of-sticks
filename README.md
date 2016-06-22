@@ -31,7 +31,7 @@ This assignment is split into parts:
 
 ### Normal Mode
 
-#### Player vs Player
+#### HumanPlayer vs HumanPlayer
 
 Create a game where two players can play against each other. The two examples
 below demonstrate how the game should behave.
@@ -43,17 +43,17 @@ Welcome to the Game of Sticks!
 How many sticks are there on the table initially (10-100)? 10
 
 There are 10 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 7 sticks on the board.
-Player 2: How many sticks do you take (1-3)? 3
+HumanPlayer 2: How many sticks do you take (1-3)? 3
 
 There are 4 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There is 1 stick on the board.
-Player 2: How many sticks do you take (1-3)? 1
-Player 2, you lose.
+HumanPlayer 2: How many sticks do you take (1-3)? 1
+HumanPlayer 2, you lose.
 ```
 
 Example 2:
@@ -67,20 +67,20 @@ Please enter a number between 10 and 100.
 How many sticks are there on the table initially (10-100)? 50
 
 There are 50 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 47 sticks on the board.
-Player 2: How many sticks do you take (1-3)? 55
+HumanPlayer 2: How many sticks do you take (1-3)? 55
 Please enter a number between 1 and 3
-Player 2: How many sticks do you take (1-3)? 3
+HumanPlayer 2: How many sticks do you take (1-3)? 3
 
 There are 44 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 ...
 
 There is 1 stick on the board.
-Player 1: How many sticks do you take (1-3)? 1
-Player 1, you lose.
+HumanPlayer 1: How many sticks do you take (1-3)? 1
+HumanPlayer 1, you lose.
 ```
 
 
@@ -89,7 +89,7 @@ Player 1, you lose.
 
 ### Normal Mode
 
-#### Player vs StupidAI
+#### HumanPlayer vs StupidAI
 We are low on friends to are willing to play with us so as software engineers we
 will make our own friends.  Create an AIPlayer that randomly picks a number of
 sticks.  It should pick a correct number so it should not pick more sticks than
@@ -120,7 +120,7 @@ memory.
 
 ### Hard Mode
 
-### Player vs LearningAI
+### HumanPlayer vs LearningAI
 Let's create an artificial intelligence player for the Game of Sticks. Instead
 of creating an AI based off knowledge of the optimal strategy, we'll create
 an AI that can learn from games it wins and loses, and then we can look at it
@@ -160,11 +160,11 @@ content | 1,2,3 | 1,2,3 | 1,2,3 | 1,2,3 | 1,2,3 | 1,2,3 | 1,2,3 | 1,2,3 | 1,2,3 
 
 The game may proceed as follows:
 
-1. Player takes 3 sticks, there are 7 sticks remaining.
+1. HumanPlayer takes 3 sticks, there are 7 sticks remaining.
 2. AI randomly picks up ball 2 from the hat 7. This means that the AI takes 2 sticks, and there are 5 sticks remaining.
-3. Player takes 1 stick, there are 4 sticks remaining.
+3. HumanPlayer takes 1 stick, there are 4 sticks remaining.
 4. AI randomly picks up ball 3 from hat 4. This means that AI takes 3 sticks, and there is 1 stick remaining.
-5. Player has to take the final stick and loses.
+5. HumanPlayer has to take the final stick and loses.
 
 Now, the situation with the AI is as follows:
 
@@ -196,13 +196,13 @@ Options:
 Which option do you take (1-2)? 2
 
 There are 10 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 7 sticks on the board.
 AI selects 2.
 
 There are 5 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 2 sticks on the board.
 AI selects 2.
@@ -210,30 +210,30 @@ AI loses.
 Play again (y/n)? y
 
 There are 10 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 1
+HumanPlayer 1: How many sticks do you take (1-3)? 1
 
 There are 9 sticks on the board.
 AI selects 1.
 
 There are 8 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 5 sticks on the board.
 AI selects 3.
 
 There are 2 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 2
+HumanPlayer 1: How many sticks do you take (1-3)? 2
 You lose.
 Play again (y/n)? y
 
 There are 10 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 7 sticks on the board.
 AI selects 2.
 
 There are 5 sticks on the board.
-Player 1: How many sticks do you take (1-3)? 3
+HumanPlayer 1: How many sticks do you take (1-3)? 3
 
 There are 2 sticks on the board.
 AI selects 2.
