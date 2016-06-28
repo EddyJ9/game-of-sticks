@@ -3,7 +3,5 @@
  */
 public interface Player {
     String getName();
-    String setName();
     int chooseSticks();
-
 }

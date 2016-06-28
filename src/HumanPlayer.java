@@ -10,6 +10,7 @@ public class HumanPlayer extends AbstractPlayer{
         super(name);
     }
 
+
     @Override
     public int chooseSticks() {
         int rval = 0;

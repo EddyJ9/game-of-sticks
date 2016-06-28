@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -8,6 +11,8 @@ public class Game {
     private Player player2;
     private int sticks;
     private Player currentPlayer = null;
+    String loser = null;
+    String winner = null;
     private Scanner scanner = new Scanner(System.in);
 
     public Game(Player player1, Player player2){
@@ -17,6 +22,22 @@ public class Game {
 
     public int getSticks() {
         return sticks;
+    }
+
+    public String getLoser() {
+        return loser;
+    }
+
+    public String getWinner() {
+        return winner;
+    }
+
+    public String setLoser(Player name) {
+        return loser = name.getName();
+    }
+
+    public String setWinner(Player name) {
+        return winner = name.getName();
     }
 
     public int stickTotal(){
@@ -44,10 +65,11 @@ public class Game {
         }
     }
 
-    public Player runGame(){
+    public Player runGame() throws FileNotFoundException {
         int choice = currentPlayer.chooseSticks();
         while(sticks > 0 && sticks - choice > 0){
             sticks = sticks - choice;
+            System.out.format("%s took %d sticks\n", currentPlayer.getName(), choice);
             System.out.format("There are %d sticks left on the board\n", sticks);
             if(sticks == 1 || (sticks - choice) > sticks){
                 switchPlayer();
@@ -55,11 +77,15 @@ public class Game {
             else{
                 switchPlayer();
                 choice = currentPlayer.chooseSticks();
-
             }
         }
         System.out.format("I'm sorry %s but you lose.\n", currentPlayer.getName());
-
+        setLoser(currentPlayer);
+        switchPlayer();
+        setWinner(currentPlayer);
         return currentPlayer;
+
     }
+
+
 }
